@@ -1,1 +1,46 @@
+@use 'themes' as *;
+
+@use '@nebular/theme/styles/globals' as *;
+
+@include nb-install() {
+  @include nb-theme-global();
+};
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+
+
+/* Importing Bootstrap SCSS file. 
+  */
+	/* @import '~bootstrap/scss/bootstrap';
+*/
+
+@import 'ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
+@import 'ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
+/* Importing Bootstrap SCSS file. */
+/*@import "./node_modules/bootstrap/scss/bootstrap"; */
+
+.test{
+
+  height: 100px !important;
+}
+
+.details[_ngcontent-wfq-c224] img[_ngcontent-wfq-c224] {
+  height: 600px !important;
+}
+
+.owl-carousel .owl-stage-outer  {
+  height: 500px!important;
+}
+
+.owl-carousel .owl-stage{
+  height: 500px!important;
+
+}
+
+
+
+

@@ -1,0 +1,17 @@
+<mat-progress-bar *ngIf="load.isLoading | async" mode="indeterminate"></mat-progress-bar>
+
+<div class="flex">
+  
+    <mat-card  class="example-card">
+
+
+<p > لقد تم تأكيد البريد الإلكتروني الخاص بك </p>
+            <p>سيتم تحويلك للصفحة الرئيسية</p>
+           
+      
+      </mat-card>
+</div>
+<router-outlet></router-outlet>
+<p> {{name}} confirms</p>
+
+

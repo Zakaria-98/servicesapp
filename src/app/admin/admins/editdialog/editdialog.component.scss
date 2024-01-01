@@ -1,0 +1,51 @@
+
+@font-face {
+	font-family: "Alexandria";
+	src:
+	  url("../../../../assets/fonts/Alexandria/Alexandria-VariableFont_wght.ttf");
+  }
+  @font-face {
+	font-family: "cairo";
+	src:
+	  url("../../../../assets/fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf");
+  }
+
+body{
+    overflow: hidden;
+}
+
+.example-form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+
+}
+.contents{
+    height: 200px;
+    overflow: hidden;
+}
+
+p{
+    font-family: alexandria;
+
+}
+
+mat-label{
+    font-family: cairo;
+
+}
+
+button{
+    font-family: alexandria;
+
+}
+
+input{
+    font-family: alexandria;
+font-size: large;
+}
+

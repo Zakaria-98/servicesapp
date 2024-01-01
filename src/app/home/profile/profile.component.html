@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="flex">
+        <div class="basic">
+                <mat-card class="example-card">
+                    <mat-card-header class="matheader">
+                    <div mat-card-avatar class="example-header-image" >
+                      <img class="imageprofile" [src]="profileimg">
+                    </div>
+                    <mat-card-title>{{name}}</mat-card-title>
+                    
+                    <mat-card-subtitle></mat-card-subtitle>
+                    <mat-card-subtitle></mat-card-subtitle>
+                    </mat-card-header>
+                    
+                    </mat-card>
+
+        </div>
+    </div>
+
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+        <mat-tab label="الملف الشخصي">
+            <div class="tabcontainer">
+               
+                    <div class="about">
+                        <h2><mat-icon>account_circle</mat-icon> نبذة شخصية</h2>
+                        <h1>{{abstract}}</h1> 
+                        <h2><mat-icon>note</mat-icon> التقييم</h2>
+                        <mat-icon class="goldstar"  *ngIf="rating1">star</mat-icon>
+                        <mat-icon class="goldstar"  *ngIf="rating2">star</mat-icon>
+                        <mat-icon class="goldstar" *ngIf="rating3">star</mat-icon>
+                        <mat-icon class="goldstar"  *ngIf="rating4">star</mat-icon>
+                        <mat-icon class="goldstar" *ngIf="rating5">star</mat-icon>
+
+                        <div class="whitestars" *ngIf="zerorate">
+                          <mat-icon class="whitestar"  >star</mat-icon>
+                          <mat-icon class="whitestar" >star</mat-icon>
+                          <mat-icon class="whitestar" >star</mat-icon>
+                          <mat-icon class="whitestar"  >star</mat-icon>
+                          <mat-icon class="whitestar" >star</mat-icon>
+  
+                        </div>
+              
+
+                        <h2><mat-icon>home</mat-icon> المدينة</h2>
+                        <h1> {{city}} </h1>
+                        <h2><mat-icon>email</mat-icon> البريد الإلكتروني</h2>
+                        <h1> {{email}} </h1>
+                        <h2><mat-icon>phone</mat-icon> رقم الهاتف</h2>
+                        <h1>{{phone}}</h1>
+                        </div>
+                        
+              
+            </div>
+
+
+        </mat-tab>
+
+        <mat-tab label="خدماتي">
+            <div class="outcard"> 
+              
+              
+                <div class="card">
+                <mat-card *ngFor="let service of srchservice" class="examplee-card" routerLink="/home/service/info/{{service.id}}" >
+                 
+                  <img mat-card-image src="data:image/png;base64,{{service.image}}" alt="Photo of a Shiba Inu">
+                  <mat-card-content>
+                    <p>
+                      {{service.title}}    
+                      <mat-icon *ngIf="service.isVerificated" class="verify" >verified_user</mat-icon>
+                        </p>
+                  </mat-card-content>
+                  <mat-card-actions>
+              
+                  </mat-card-actions>
+                </mat-card>
+
+ 
+
+              
+            </div>
+
+        </div>
+        </mat-tab>
+
+        
+      </mat-tab-group>
+    
+
+</div>
+

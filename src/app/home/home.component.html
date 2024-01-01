@@ -1,0 +1,77 @@
+<div class="fullpage">
+  <mat-progress-bar *ngIf="load.isLoading | async" mode="indeterminate"></mat-progress-bar>
+      <nav>
+
+
+        
+      
+        <ul>
+          <div>
+            <div>
+              
+            </div>
+            <label *ngIf="loggedin">مستخدم</label>
+          <button *ngIf="loggedin"  class="profileimg"  mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <img [src]="profileimg" style="height:80%;
+            vertical-align:middle; border-radius:50% ;" >
+           
+          </button>
+          <mat-menu  #menu="matMenu">
+            <button mat-menu-item (click)="secondbtn()" >
+              <mat-icon>account_circle</mat-icon>
+              <span>{{username}}</span>
+             
+            </button>
+            <button mat-menu-item (click)="firstbtn()">
+              <mat-icon>settings</mat-icon>
+              <span>حسابي</span>
+            </button>
+
+            <button mat-menu-item (click)="thirdbtn()">
+              <mat-icon>input</mat-icon>
+              <span>تسجيل الخروج</span>
+            </button>
+
+          </mat-menu>
+          <button class="navregbtn" *ngIf="!loggedin"  mat-icon-button  aria-label="Example icon-button with a menu"  (click)="loginbtn()">
+             دخول
+          </button>
+
+          <button *ngIf="loggedin"  mat-icon-button  aria-label="Example icon-button with a menu"  (click)="addbtn()">
+            <mat-icon style="color: #51466b; margin-right: 15px;" matSuffix>add</mat-icon>
+          </button>
+         
+
+          
+
+            
+
+
+        </div>
+          
+
+          <mat-form-field class="example-form-field">
+            <mat-label style="color: #51466b;">إبحث</mat-label>
+            <input [(ngModel)]="keyword" style="color: #51466b;" matInput type="text">
+            <button matSuffix mat-icon-button aria-label="Clear"  (click)="searchbtn(keyword)" >
+              <mat-icon>search</mat-icon>
+            </button>
+          </mat-form-field>
+          
+          
+          
+          <li  *ngIf="loggedin"  style="color: #51466b;"><a href="/home/main" ><p>الرئيسية</p> </a></li>
+          <li style="color: #51466b;"><a href="/home/service/all" ><p>خدمات</p> </a></li>
+          <li style="color: #51466b;"><a href="/home/categories" ><p>مجالات</p> </a></li>
+        
+        </ul>
+        </nav>
+
+</div>
+        
+
+
+
+
+   
+<router-outlet></router-outlet>

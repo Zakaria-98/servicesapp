@@ -1,0 +1,92 @@
+.flex{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.example-card{
+    width: 600px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+}
+
+.addimg{
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    margin-bottom: 20px;
+    background-size: cover;
+    border-radius: 50%;
+    
+
+}
+
+img{
+    height: 100%;
+    width: 100%;
+
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 100px;
+
+    
+}
+
+.inputbtn{
+    position: relative;
+    cursor: pointer;
+}
+
+.inputfile{
+    position: absolute;
+    top: 250px;
+    right:280px;
+   width: 40px;
+   height: 100px;
+   opacity: 0;
+    cursor: pointer;
+
+
+}
+
+.bioinput{
+    height: 200px;
+    width: 400px;  
+}
+
+textarea{
+    height: 180px;
+    width: 400px;  
+    margin-bottom: 20px;
+
+}
+
+.mat-card>:last-child:not(.mat-card-footer), .mat-card-content>:last-child:not(.mat-card-footer) {
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px){
+
+    inputbtn{
+        position: relative;
+    }
+    
+    .inputfile{
+        position: absolute;
+        top: 250px;
+        right:230px;
+       width: 40px;
+       height: 100px;
+       opacity: 0;
+        cursor: pointer;
+    
+    
+    }
+}

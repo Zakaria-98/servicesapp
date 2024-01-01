@@ -1,0 +1,88 @@
+
+@font-face {
+	font-family: "Alexandria";
+	src:
+	  url("../../../assets/fonts/Alexandria/Alexandria-VariableFont_wght.ttf");
+  }
+  @font-face {
+	font-family: "cairo";
+	src:
+	  url("../../../assets/fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf");
+  }
+
+.buttons{
+    direction: rtl;
+
+    margin-bottom: 15px;
+}
+
+.btnrow{
+    margin-right: 10px;
+    font-family: alexandria;
+
+}
+
+ag-grid-angular{
+    height: 920px;
+    width: 1900px;
+}
+
+::ng-deep  .service-list-grid .ag-ltr .ag-cell {
+    direction: rtl;
+}
+  
+
+::ng-deep .service-list-grid .ag-ltr .ag-header-select-all{
+
+    margin-left: 18px;
+  }
+  
+  ::ng-deep .service-list-grid .ag-ltr .ag-selection-checkbox{
+  
+    margin-left: 12px !important;
+  
+  }
+  
+  
+  ::ng-deep .service-list-grid .ag-ltr .ag-cell {
+    font-size: 20px;
+    padding: 4px;
+    font-family: cairo;
+  }
+  
+  ::ng-deep .ag-header-cell-label {
+    justify-content: right;
+    font-size: 15px;
+    color: #fff;
+  }
+  
+  ::ng-deep .service-list-grid .ag-root-wrapper {
+    border: none;
+  }
+  
+  ::ng-deep .service-list-grid .ag-header {
+    background-color:#4f7942    ;
+    font-family: alexandria;
+  }
+  
+  ::ng-deep .bg-danger-cell {
+    background-color: var(--color-danger-600);
+    
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  ::ng-deep .service-list-grid .ag-row-odd {
+    background-color: #eee;
+  }
+  
+  ::ng-deep .service-list-grid .ag-row-selected {
+    background-color: #9cd3ff;
+    color: rgb(0, 0, 0);
+  }
+  
+  ::ng-deep .service-list-grid .ag-row-hover {
+    background-color: #aad9ff;
+    color: #000;
+  }
+  

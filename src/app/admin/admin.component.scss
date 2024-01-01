@@ -1,0 +1,75 @@
+
+@font-face {
+	font-family: "Alexandria";
+	src:
+	  url("../../assets/fonts/Alexandria/Alexandria-VariableFont_wght.ttf");
+  }
+  @font-face {
+	font-family: "cairo";
+	src:
+	  url("../../assets/fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf");
+  }
+.fullpage{
+	display: flex;
+	flex-direction: column;
+
+
+
+}
+
+nav{
+
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.btnrow{
+
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	justify-content: center;
+
+	
+}
+
+.btn{
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+    margin: 30px 30px 30px 30px;
+    
+}
+
+.profileimg h4{
+    font-family: alexandria;
+}
+
+.profileimg mat-icon {
+   color: #51466b;
+   
+   
+}
+
+.filterslist{
+    direction: rtl;
+    margin-bottom: 25px;
+}
+
+.srchfilter{
+    height: 35px;
+    margin-left: 10px;
+    font-family: cairo;
+}
+
+.filterbtn{
+
+    margin-left: 10px;
+   font-family: cairo;
+}
+
+.filtericon{
+    
+    border-radius: 0px;
+   
+}

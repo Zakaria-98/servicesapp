@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  
+</head>
+	
+	<body>
+   
+  <div class="fullpage">
+    
+    <div class="nav">
+        <nav>
+          <ul  class="left">
+            <li style="  margin-right: 20px;  " class="loginbtn" >   <a href="auth/login">دخول  </a></li>
+            <li> <button class="navregbtn"  (click)="register_click()" > تسجيل</button></li>
+          </ul>
+         
+          <ul>
+            <li style="color:black; font-size:20px"  >خدمات </li>
+            <mat-form-field class="example-form-field">
+              <mat-label style="color: #51466b;">إبحث</mat-label>
+              <input [(ngModel)]="keyword" style="color: #51466b;" matInput type="text">
+              <button (click)="searchbtn(keyword)" matSuffix mat-icon-button aria-label="Clear"  >
+                <mat-icon>search</mat-icon>
+              </button>
+            </mat-form-field>          
+
+            <li style="color:black; font-size:20px"><a href="/home/categories" ><p>مجالات</p> </a> </li>
+            <li style="color:black; font-size:20px"><a href="/home/service/all" ><p>خدمات</p></a>  </li>
+          </ul>
+          </nav>
+    <div class="header">
+      <div class="flexheader">
+      <div class=headerimg> <img src="../../assets/img/illustration-working.svg"></div>
+      <div class=headertxt>
+        <h1 >موقع خدمات يمكنك من تصفح مقدمي الخدمات </h1>
+        <h1 >إختيار ما يناسبك</h1>
+        <button class="regbtn" (click)="register_click()" >سجل الآن</button>
+      </div>
+      
+
+    </div>
+
+    </div>
+    <div class="categories">
+      <mat-card class="example-card  cat" *ngFor="let cat of category
+"
+      routerLink="/home/categories/cat/{{cat.id}}">
+        
+          
+        <mat-card-content class="cattitle">
+          <p>
+           {{cat.name}}
+          </p>
+        </mat-card-content>
+        
+        <mat-card-actions>
+          <div class="catrate">
+            <div class="star">
+              <mat-icon  fontIcon="category"></mat-icon>
+            </div>
+            
+          
+            <h1 class="catrateservice" >{{cat.numberOfServices}} خدمة</h1>
+        </div>
+        </mat-card-actions>
+      </mat-card>
+       
+      
+    </div>
+
+  </div>
+  <div class="regsection">
+    <div class="regsectionflex">
+      <p> قدم أعمالك الآن </p>
+      <button class="regbtn" (click)="register_click()"> التسجيل</button>
+    </div>
+  </div>
+</div>
+
+  </body>
+  <router-outlet></router-outlet>

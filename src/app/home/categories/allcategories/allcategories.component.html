@@ -1,0 +1,33 @@
+<div class="outcard"> 
+
+<div class="categories">
+      
+    <mat-card class="example-card  cat" *ngFor="let cat of category
+    | paginate: {itemsPerPage: 10, currentPage: p }" 
+    routerLink="/home/categories/cat/{{cat.id}}">
+      
+        
+      <mat-card-content class="cattitle">
+        <p>
+         {{cat.name}}
+        </p>
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <div class="catrate">
+          <div class="star">
+            <mat-icon  fontIcon="category"></mat-icon>
+          </div>
+          
+        
+          <h1 class="catrateservice" >{{cat.numberOfServices}} خدمة</h1>
+      </div>
+      </mat-card-actions>
+    </mat-card>
+
+   
+    </div>
+    <pagination-controls (pageChange)="p= $event "  ></pagination-controls>
+
+</div>
+    <router-outlet></router-outlet>

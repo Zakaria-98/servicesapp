@@ -1,0 +1,61 @@
+body{
+    overflow: hidden;
+    overflow: hidden;
+
+}
+
+
+.example-form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+
+}
+
+.btns{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+button{
+    margin-right:10px ;
+}
+.contents{
+    height: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+
+p{
+    font-family: alexandria;
+
+}
+
+mat-label{
+    font-family: cairo;
+
+}
+
+button{
+    font-family: alexandria;
+
+}
+
+input{
+    font-family: alexandria;
+font-size: large;
+}
+

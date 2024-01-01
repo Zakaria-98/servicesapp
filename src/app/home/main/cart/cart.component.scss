@@ -1,0 +1,191 @@
+.container{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.example-card{
+    direction: rtl;
+    height: 200px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    
+
+  }
+
+.example-card .info{
+    font-size: 10px;
+    font-family: alexandria;
+    margin-top: 40px;
+   
+
+}
+
+.info >p{
+    line-height:1.4;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .container{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .example-card{
+        
+        height: 100px;
+
+    }
+
+
+
+    .example-header-image {
+
+        width: 75px;
+        height: 75px;
+        
+    
+      }
+
+    
+      .mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn{
+            margin-left: 10px;
+        }
+
+        .example-card .info{
+
+            margin-top: 5px;
+           
+        
+        }
+    
+
+
+}
+
+@media only screen and (min-width: 600px){
+
+    .container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .example-card{
+    
+        height: 125px;
+    }
+
+    .example-header-image {
+
+        width: 90px;
+        height: 90px;
+        
+    
+      }
+    
+    .example-card .info{
+        font-size: 17px;
+        font-family: alexandria;
+       
+    
+    }
+
+    .mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn{
+        margin-left: 10px;
+    }
+
+    .example-card .info{
+
+        margin-top: 10px;
+       
+    
+    }
+  
+  }
+  
+	@media only screen and (min-width: 768px) {
+        .container{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .example-card{
+        
+            height: 150px;
+        }
+    
+        .example-header-image {
+    
+            width: 115px;
+            height: 115px;
+            
+        
+          }
+        
+        .example-card .info{
+            font-size: 20px;
+            font-family: alexandria;
+           
+        
+        }
+        .mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn{
+            margin-left: 10px;
+        }
+
+        .example-card .info{
+
+            margin-top: 20px;
+           
+        
+        }
+	}
+  
+	@media only screen and (min-width: 992px) {
+        .container{
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        
+        .example-card{
+            direction: rtl;
+            height: 200px;
+        }
+        
+        .example-header-image {
+            background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+            background-size: cover;
+            width: 150px;
+            height: 150px;
+            
+        
+          }
+        
+        .example-card .info{
+            font-size: 30px;
+            font-family: alexandria;
+           
+        
+        }
+
+
+        .mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn{
+            margin-left: 10px;
+        }
+        
+        .example-card .info{
+
+            margin-top: 40px;
+           
+        
+        }
+
+  
+	}
+  
+  
+  

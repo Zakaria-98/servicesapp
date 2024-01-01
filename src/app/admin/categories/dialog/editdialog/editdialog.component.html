@@ -1,0 +1,22 @@
+<p matDialogTitle>{{title}}</p>
+<div mat-dialog-container class="contents">
+
+    <form class="example-form"  [formGroup]="newcatform" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+          <mat-label >الاسم </mat-label>
+
+          <input matInput  type="text"formControlName="name" required>
+          
+        </mat-form-field>
+        <small  *ngIf="newcatform.get('name')?.invalid && newcatform.get('name')?.touched"> يرجى إدخال الإسم</small>
+
+   
+
+    <div mat-dialog-actions class="btns">
+
+        <button mat-dialog-close mat-raised-button mat-raised-button color="primary" [disabled]="newcatform.invalid"  type="submit"> إضافة</button>
+        <button mat-raised-button color="warn" mat-dialog-close  mat-button>إلغـاء</button>
+      </div>
+    </form>
+</div>
+

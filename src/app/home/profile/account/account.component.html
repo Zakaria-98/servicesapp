@@ -1,0 +1,45 @@
+
+<div class="flex">
+    <form [formGroup]="form"  class="example-form" (ngSubmit)="onSubmit()" >
+    <mat-card class="example-card">
+      <div class="addimg">
+        <img class="inputbtn" id="blah"  [src]="imageSrc"/>
+      </div>
+      <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <mat-icon>image</mat-icon>
+      </button>
+      <input class="inputfile" type='file'  (change)="readURL($event);" />
+
+      <mat-form-field class="example-full-width bioinput">
+        <mat-label> الإسم</mat-label>
+        
+        <input required  formControlName="Name"  matInput placeholder=" الرجاء إدخال الإسم" >
+        
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width bioinput">
+        <mat-label> رقم الهاتف</mat-label>
+        <input required formControlName="PhoneNumber" matInput placeholder=" الرجاء إدخال رقم الهاتف" >
+      </mat-form-field>
+
+      <mat-form-field style="width: 400px;">
+        <mat-label>المدينة </mat-label>
+        <mat-select required formControlName="CityID"  matNativeControl >
+          <mat-option *ngFor="let city of allcities" value="{{ city.id}}" selected> {{city.name}}</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+      
+    
+      <mat-form-field class="example-full-width bioinput">
+        <mat-label>نبذة شخصية</mat-label>
+        
+        <textarea required formControlName="Abstract"  matInput placeholder="تكلم عن نفسك" ></textarea>
+      </mat-form-field>
+      
+      <button class="nxtbtn" mat-button color="primary" type="submit" [disabled]="form.invalid">تحديث </button>
+      </mat-card>
+      </form>
+</div>
+<router-outlet></router-outlet>

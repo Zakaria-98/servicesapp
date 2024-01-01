@@ -1,0 +1,39 @@
+<mat-progress-bar *ngIf="load.isLoading | async" mode="indeterminate"></mat-progress-bar>
+
+<div class="flex">
+  
+    <mat-card class="example-card">
+
+        <form class="example-form" #LogInForm="ngForm" (ngSubmit)="onSubmit()">
+
+
+        <mat-form-field class="example-full-width">
+            
+          <input matInput placeholder="البريد الإلكتروني" name="email"  [(ngModel)]="email"  type="email" minlength="4"   required>
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            
+            <input matInput placeholder="كلمة المرور"  name="password"  [(ngModel)]="password"   type="password" minlength="4" required >
+            <mat-icon matSuffix>password</mat-icon>
+          </mat-form-field>
+          <h1 style="color: red;"> {{errorMessage}} </h1>
+       <!--   <h1 style="color: red;" *ngif="email.errors.required"> الرجاء إدخال البريد الإلكتروني </h1>
+          <h1 style="color: red;" *ngif="email.errors.minlength || email.errors.pattern">  الرجاء إدخال بريد الإلكتروني  صحيح</h1>
+          <h1 style="color: red;" *ngif="email.errors.minlength || email.errors.pattern">  الرجاء إدخال بريد الإلكتروني  صحيح</h1> -->
+          <button class="loginbtn" mat-raised-button color="primary"  [disabled]="LogInForm.invalid " type="submit">تسجيل الدخول</button>
+      </form>
+      <div class="reg">
+        
+        <button class="regbtn"  mat-button color="warn" routerLink="auth/register" (click)="forgetbtn()">   هل نسيت كلمة المرور ؟ </button>
+      </div>   
+      <div class="reg">
+        
+        <p >ليس لديك حساب مسبقا، قم بالتسجيل الآن</p>
+        <button class="regbtn"  mat-button color="primary" routerLink="auth/register" (click)="registerbtn()">التسجيل</button>
+      </div>
+
+      </mat-card>
+</div>
+<router-outlet></router-outlet>

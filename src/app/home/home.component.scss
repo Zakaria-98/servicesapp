@@ -1,0 +1,172 @@
+@font-face {
+	font-family: "Alexandria";
+	src:
+	  url("../../assets/fonts/Alexandria/Alexandria-VariableFont_wght.ttf");
+  }
+  @font-face {
+	font-family: "cairo";
+	src:
+	  url("../../assets/fonts/Cairo/Cairo-VariableFont_slnt\,wght.ttf");
+  }
+
+
+
+.fullpage{
+	display: flex;
+	flex-direction: column;
+	
+
+
+
+}
+
+nav{
+
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	justify-content: flex-end;
+
+	
+}
+
+.profileimg{
+	
+	background-size: cover;
+	
+}
+
+.profileimg mat-icon {
+	color: #51466b;
+	
+ }
+
+nav .left{
+
+	font-family: alexandria;
+	color: #198754;
+	display: flex;
+	
+	width: 10%;
+	
+	align-items: center;
+	list-style: none;
+	font-family: alexandria;
+	color: gray;
+	direction: rtl;
+	margin-left: 20px;
+
+}
+
+
+
+nav >ul{
+
+		display: flex;
+	flex-direction: row;
+	width: 30%;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	font-family: alexandria;
+	color: gray;
+	direction: rtl;
+	margin-right: 50px;
+}
+
+.navregbtn{
+	cursor: pointer;
+	border: 0;
+	border-radius: 4px;
+	font-weight: 600;
+	margin: 0 10px;
+	width: 100px;
+	
+	
+  
+	background-color: #2cd1d2;
+	transition: 0.4s;
+	color: white;
+	font-family: alexandria;
+
+}
+
+.navregbtn:hover {
+	color: white;
+	
+	
+	background-color:#3a3054;
+  }
+
+@media screen and (max-width: 600px) {
+	nav{
+
+		width: 100% ;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		
+	}
+
+	nav ul{
+		width: 100%;
+		margin-right: 0px;
+	}
+
+
+	
+
+	
+  
+  }
+  
+  @media only screen and (min-width: 600px){
+	nav{
+
+		width: 100% ;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+
+	nav ul{
+		width: 85%;
+		
+	}
+  
+  }
+  
+	@media only screen and (min-width: 768px) {
+		nav{
+
+			width: 100% ;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+	
+		nav ul{
+			width: 65%;
+		    margin-right: 50px;
+		}
+  
+	}
+  
+	@media only screen and (min-width: 992px) {
+		nav{
+
+			width: 100% ;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+
+		}
+	
+		nav ul{
+			width: 60%;
+		    margin-right: 50px;
+		}
+  
+	}
+  
+  

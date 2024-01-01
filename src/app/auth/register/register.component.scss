@@ -1,0 +1,74 @@
+.flex{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.example-card{
+    width: 600px;
+    height: 800px;
+
+}
+
+
+.example-card{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: fit-content;
+  
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    
+
+  }
+
+  .example-form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .example-full-width{
+    width: 80%;
+    margin-bottom: 15px;
+   
+  }
+
+  .loginbtn{
+    width: 80%;
+  }
+
+  .reg{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .reg p{
+    font-size: large;
+    margin-top: 10px;
+  }
+
+  .regbtn{
+    border:solid 1px #3f51b5;
+  }
+
+  .nameflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  input {
+    direction: rtl;
+  }

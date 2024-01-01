@@ -1,0 +1,23 @@
+
+<div class="buttons">
+    <button class="btnrow"  (click)="new_city_dialog()"   mat-raised-button color="primary">إضافـة مدينة  <mat-icon style="color: white;">add</mat-icon></button>
+    <button class="btnrow" (click)="edit_city_dialog()" *ngIf="show_edit_btn" mat-raised-button color="primary">تعديل  <mat-icon style="color: white;">update</mat-icon></button>
+    <button class="btnrow" (click)="delete_city_dialog()" mat-raised-button color="warn" *ngIf="show_delete_btn" >حذف  <mat-icon style="color: white;">delete</mat-icon></button>
+    </div>
+    
+    <ag-grid-angular  class="ag-theme-alpine text-end service-list-grid"
+        [columnDefs]="colDefs"
+        [rowData]="rowData "
+        [rowSelection]="'multiple'"
+        [animateRows]="true"
+        (cellClicked)="onCellClicked($event)"
+        (rowDoubleClicked)="onRowDoubleClick($event)"
+        
+        [headerHeight]="35" [rowHeight]="35" [overlayNoRowsTemplate]="'لا يوجد خدمات لعرضها'"
+                  [defaultColDef]="defaultColDef"
+                 
+        
+        >
+     
+    </ag-grid-angular>
+    

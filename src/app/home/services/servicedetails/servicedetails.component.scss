@@ -1,0 +1,312 @@
+.container{
+    margin-left: 200px;
+    margin-right: 200px;
+    
+    
+}
+.filterslist{
+    direction: rtl;
+    margin-bottom: 25px;
+}
+
+.filtericon{
+    width: 65px;
+    border: solid;
+    border-radius: 0.3px;
+    border-color: red;
+    margin-left: 10px;
+}
+
+.flex{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.details{
+    height: fit-content;
+    width: 100%;
+    background-color: #f2f3f4     ;
+   
+}
+
+
+.detailstit{
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    
+   
+
+}
+
+.title{
+    margin-top: 40px;
+    margin-bottom: 25px;
+    display: flex;
+    direction: rtl;
+    font-weight: bold;
+   
+    
+    
+}
+
+.verify{
+    color:#C41E3A;
+    margin-right: 5px;
+}
+
+
+
+.title p{
+    font-size: 30px;
+    font-family: cairo;
+    margin-right: 10px;
+    
+
+}
+
+.whitestars{
+    direction: rtl;
+}
+
+.catname{
+    font-size: large;
+    font-family: alexandria;
+    direction: rtl;
+    margin-right: 10px;
+}
+
+.img{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 500px;
+    align-items: center;
+    
+    
+}
+
+.details img{
+    height: 100%;
+    width: 100%;
+  
+}
+
+.detailstext{
+    direction: rtl;
+    float: right;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: fit-content;
+
+}
+
+.detailstext >p{
+    font-family: cairo;
+    font-size: 20px;
+    white-space: pre-line;
+    line-height: 1.5;
+    
+}
+
+.serviceprovider{
+    width: 100%;
+    height: fit-content;
+}
+
+.serviceprovider .header{
+    width: 100%;
+    height: 200px;
+  
+    direction: rtl;
+}
+
+.example-card{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: fit-content;
+    cursor: pointer;
+  
+}
+
+.example-card2{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: fit-content;
+    
+  
+}
+
+.example-card:hover{
+    transform: scale(1.1);
+  
+    }
+
+.example-header-image {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    margin-bottom: 20px;
+    
+    border-radius: 50%;
+  }
+
+  .imageprofile{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+  .comments{
+   
+    width: 100%;
+    direction: rtl;
+
+  }
+
+  .comments >p{
+    float:right;
+    color: #3568c0;
+    display: inline;
+    
+    font-size: 20px;
+    font-family: alexandria;
+    
+  }
+
+  .info >p{
+    font-family: cairo;
+    font-size: 20px;
+
+  }
+
+  .example-full-width{
+    width: 90%;
+}
+
+.comment-form{
+    direction: rtl;
+}
+
+.ratingstar{
+    color: #FFD700;
+    
+    border-color: #FFD700;
+}
+
+.btnstar{
+    border: none; 
+    background-color: white;
+}
+.goldstar{
+     color: #FFD700;
+     font-size: 25px;
+
+}
+
+
+
+owl-carousel-o{
+    height: fit-content;
+    width: fit-content;
+}
+
+.owl-carousel .owl-stage{
+    height: 500px!important;
+
+}
+
+.owl-carousel .owl-stage-outer {
+    height: 500px!important;
+}
+
+.details[_ngcontent-wfq-c224] img[_ngcontent-wfq-c224] {
+    height: 600px !important;
+  }
+
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .container{
+        margin-left: 10px;
+        margin-right: 10px;
+        
+        
+    }
+    .title{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        display: flex;
+        
+        
+    }
+
+    .img{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        height: 300px;
+        width: 100%;
+        
+    }
+
+
+    
+  
+ 
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container{
+        margin-left: 30px;
+        margin-right: 30px;
+        
+        
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .container{
+        margin-left: 50px;
+        margin-right: 50px;
+        
+        
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .container{
+        margin-left: 80px;
+        margin-right: 80px;
+        
+        
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .container{
+        margin-left: 100px;
+        margin-right: 100px;
+        
+        
+    }
+}

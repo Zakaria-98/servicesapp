@@ -1,0 +1,51 @@
+
+
+<div class="flex">
+    <form [formGroup]="form"  class="example-form" (ngSubmit)="onSubmit()" >
+    <mat-card class="example-card">
+      <div class="threeimages">
+    <div class="imagediv">
+      <div class="addimg">
+        <img class="inputbtn" id="blah"  [src]="imageSrc"/>
+      </div>
+      <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <mat-icon>image</mat-icon>
+      </button>
+      <input class="inputfile2" type='file' multiple (change)="readURL($event);" />
+    </div>
+
+
+
+      
+    </div>
+      <mat-form-field class="example-full-width bioinput">
+        <mat-label> عنوان الخدمة</mat-label>
+        
+        <input formControlName="Title"  matInput placeholder=" الرجاء إدخال الإسم" >
+        
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width bioinput">
+        <mat-label> السعر </mat-label>
+        <input formControlName="Price" type="number" matInput placeholder=" الرجاء إدخال رقم الهاتف" >
+      </mat-form-field>
+
+      <mat-form-field style="width: 400px;" >
+        <mat-label>نوع المجال</mat-label>
+        <mat-select   formControlName="ServiceTypeID"  matNativeControl >
+          <mat-option  *ngFor="let category of allcategoties" value="{{ category.id}}" selected> {{category.name}}</mat-option>
+
+        </mat-select>
+      </mat-form-field>
+    
+      <mat-form-field class="example-full-width bioinput">
+        <mat-label>الوصف </mat-label>
+        
+        <textarea formControlName="Description"  matInput placeholder="تكلم عن الخدمة" ></textarea>
+      </mat-form-field>
+      
+      <button class="nxtbtn" mat-button color="primary" type="submit" [disabled]="form.invalid">نشر الخدمة </button>
+      </mat-card>
+      </form>
+</div>
+<router-outlet></router-outlet>

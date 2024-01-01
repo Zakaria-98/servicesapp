@@ -1,0 +1,77 @@
+<div class="outcard"> 
+  <div class="filters">
+      
+  
+
+    <mat-form-field class="example-full-width bioinput">
+      <mat-label> إبحث</mat-label>
+      
+      <input matInput style="width: 200px;" [(ngModel)]="filterkeyword">        
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select style="width: 200px;" [(ngModel)]="filterservice" matNativeControl>
+        <mat-option value="">الكل</mat-option>
+        <mat-option *ngFor="let category of allcategoties" [value]="category.id">{{ category.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+      
+        
+    <mat-form-field >
+
+          <mat-select style="width: 200px;"   [(ngModel)]="filtercity"  matNativeControl >
+            <mat-option value=""> الكل</mat-option>
+
+            <mat-option *ngFor="let city of allcities" [value]=" city.id" selected> {{city.name}}</mat-option>
+      
+          </mat-select>
+        </mat-form-field>
+
+        <button style="margin-right: 20px; height: 40px;" (click)="onSubmit()" mat-raised-button color="primary">بحث</button>
+
+      
+
+
+  </div>
+
+  
+ 
+
+  <div class="outcard"> 
+    <p >أبرز الخدمات</p>
+  
+    <div class="card">
+      <mat-card *ngFor="let service of srchservice   | paginate: {totalItems:30, itemsPerPage: 1, currentPage: p }" routerLink="/home/service/info/{{service.id}}" class="example-card">
+        <mat-card-header>
+        <div mat-card-avatar class="example-header-image">
+          <img routerLink="/admin/users" class="imageprofile" src="data:image/png;base64,{{service.profileImage}}">
+        </div>
+        <mat-card-title>{{service.userName}}</mat-card-title>
+        <mat-card-subtitle>{{service.serviceType}}</mat-card-subtitle>
+      </mat-card-header >
+      <img mat-card-image src="data:image/png;base64,{{service.image}}" >
+      <mat-card-content>
+  
+        <p>
+       {{service.title}} 
+       <mat-icon *ngIf="service.isVerificated" class="verify" >verified_user</mat-icon>
+
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+  
+      </mat-card-actions>
+    </mat-card>
+  
+    
+    </div>
+  
+  </div>
+<pagination-controls (pageChange)="onPageChange($event) "  ></pagination-controls>
+
+</div>
+
+<div class="outcard"> 
+
+
+      </div>
+<router-outlet></router-outlet>

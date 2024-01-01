@@ -1,0 +1,34 @@
+<mat-progress-bar *ngIf="load.isLoading | async" mode="indeterminate"></mat-progress-bar>
+
+<div class="flex">
+  
+    <mat-card class="example-card"  >
+      
+
+        <form [formGroup]="form"  class="example-form"  (ngSubmit)="onSubmit()">
+
+
+        
+        <mat-form-field class="example-full-width">
+          
+          <input  matInput placeholder="البريـد الإلكترونـي" type="email"  name="email" formControlName="email" minlength="7"    required   >
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            
+            <input matInput placeholder="كلمة مرور من ستة حروف احدهما رقم واحدهما حرف كبير"   name="password"formControlName="password" minlength="4"   type="password" required>
+            <mat-icon matSuffix>password</mat-icon>
+          </mat-form-field>
+          <h1 style="color: red;"> {{errorMessage}} </h1>
+          <button class="loginbtn" type="submit"  [disabled]="form.invalid" mat-raised-button color="primary" >إنشاء حساب جديد</button>
+      </form>
+      
+      <div class="reg">
+        <p>لديك حساب مسبقا</p>
+        <button mat-button color="primary" (click)="loginbtn()" >تسجيل دخول</button>
+      </div>
+
+      </mat-card>
+</div>
+<router-outlet></router-outlet>

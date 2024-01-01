@@ -1,0 +1,28 @@
+<p matDialogTitle>إضافة  </p>
+<div mat-dialog-container class="contents">
+
+    <form class="example-form"  [formGroup]="newadminform" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+          <mat-label >الاسم </mat-label>
+
+          <input matInput type="text"formControlName="email" required>
+          
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label >كلمة المرور </mat-label>
+  
+            <input matInput type="text"formControlName="password" required>
+            
+          </mat-form-field>
+        <small  *ngIf="newadminform.get('email')?.invalid && newadminform.get('email')?.touched"> يرجى إدخال الإسم</small>
+
+            
+   
+        <div mat-dialog-actions class="btns">
+
+            <button mat-dialog-close mat-raised-button mat-raised-button color="primary" [disabled]="newadminform.invalid"  type="submit"> إضافة</button>
+            <button mat-raised-button color="warn" mat-dialog-close  mat-button>إلغـاء</button>
+          </div>
+    </form>
+</div>
+

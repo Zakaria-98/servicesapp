@@ -1,0 +1,24 @@
+<div class="buttons">
+   <input class="srchfilter" [(ngModel)]="searchword" placeholder="البريد الإلكتروني ">
+   <button class="btnrow" (click)="search_fun()"  mat-raised-button color="warn">بحث <mat-icon style="color: white;">search</mat-icon></button>
+
+   <button class="btnrow" *ngIf="show_verify_btn"  (click)="verify_service()"   mat-raised-button color="primary"> توثيق الخدمة  <mat-icon style="color: white;">add</mat-icon></button>
+   <button class="btnrow" (click)="delete_service_dialog()" mat-raised-button color="warn" *ngIf="show_delete_btn" >حذف  <mat-icon style="color: white;">delete</mat-icon></button>
+
+</div>
+   <ag-grid-angular  class="ag-theme-alpine text-end service-list-grid"
+    [columnDefs]="colDefs"
+    [rowData]="rowData "
+    [rowSelection]="'multiple'"
+    [animateRows]="true"
+    (cellClicked)="onCellClicked($event)"
+    (rowDoubleClicked)="onRowDoubleClick($event)"
+
+    
+    [headerHeight]="35" [rowHeight]="35" [overlayNoRowsTemplate]="'لا يوجد خدمات لعرضها'"
+              [defaultColDef]="defaultColDef"
+             
+    
+    >
+ 
+</ag-grid-angular>

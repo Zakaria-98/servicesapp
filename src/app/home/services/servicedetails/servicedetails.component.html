@@ -1,0 +1,152 @@
+
+<div class="container">
+    <div class="filterslist">
+      <button *ngIf="isMyService" style="font-family: cairo;" (click)="delete_service()" mat-raised-button color="warn">حذف الخدمة <mat-icon style="color: white; ">delete</mat-icon></button>
+      
+      </div>
+
+     <div class="flex">
+        
+        <div class="details">
+          <div>
+
+            <div class="title">
+                <p>{{title}} </p>
+                <mat-icon class="verify" *ngIf="isVerificated">verified_user</mat-icon>
+                
+
+            </div>
+
+            <div class="catname">
+
+              <mat-icon class="goldstar" *ngIf="rating1" >star</mat-icon>
+              <mat-icon  class="goldstar" *ngIf="rating2" >star</mat-icon>
+              <mat-icon   class="goldstar" *ngIf="rating3"  >star</mat-icon>
+              <mat-icon  class="goldstar" *ngIf="rating4" >star</mat-icon>
+              <mat-icon  class="goldstar" *ngIf="rating5" >star</mat-icon>
+              
+          </div>           
+         <div class="catname" *ngIf="zerorate">
+            <mat-icon class="whitestar"  >star</mat-icon>
+            <mat-icon class="whitestar" >star</mat-icon>
+            <mat-icon class="whitestar" >star</mat-icon>
+            <mat-icon class="whitestar"  >star</mat-icon>
+            <mat-icon class="whitestar" >star</mat-icon>
+
+          </div>
+
+
+
+            <div class="catname">
+                <p><mat-icon style="padding-top:8px  ;font-size: 17px; color: #6F8FAF;">category</mat-icon> {{servicetype}}</p>
+                
+            </div>
+            <div class="catname">
+              <p> <mat-icon style=" padding-top:8px ;font-size: 17px; color: #6F8FAF;">account_balance</mat-icon> {{city}}</p>
+              
+          </div>
+          <div class="catname">
+            <p> <mat-icon style=" padding-top:8px ;font-size: 17px; color: #6F8FAF;">money</mat-icon> {{price}} د.ل / الساعة</p>
+            
+        </div>
+        </div>
+       
+        <div style=" height: 550px;">
+          
+        <owl-carousel-o style="height: 700px;"    [options]="customOptions">
+          <ng-template *ngFor="let image of imageSrc1"     carouselSlide><img style="display: block;
+            max-width: fit-content;
+           height: 450px;
+            margin: 0 auto;
+            "   src="data:image/png;base64,{{image}}"></ng-template>  
+  
+       
+        </owl-carousel-o>
+
+        
+      </div>
+           <div class="detailstit">
+
+
+
+           </div> 
+           
+            <div class="detailstext">  <p>
+{{description}}
+
+
+                </p></div>
+        </div>
+        <div class="serviceprovider">
+            <div class="header">
+                <mat-card class="example-card" (click)="profilefun()">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image">
+                        <img  class="imageprofile" src="data:image/png;base64,{{profileimg}}">
+                      </div>
+                      <mat-card-title>{{username}}</mat-card-title>
+                      
+                      
+                      <mat-card-subtitle></mat-card-subtitle>
+                    </mat-card-header>
+                    <div class="info"><p >{{userAbstract }}</p></div>
+                    </mat-card>
+
+            </div>  
+           
+        </div>
+        <div class="comments">
+            <p>التعليقات</p> 
+           <div class="title"></div>
+            <mat-card style="height: fit-content;" *ngFor=" let comment of comments" routerLink="/home/profile/user/{{comment.userID}}" class="example-card">
+              <mat-card-header>
+
+                <div mat-card-avatar class="example-header-image">
+                  <img  class="imageprofile" src="data:image/png;base64,{{comment.profileImage}}">
+                </div>
+                <mat-card-title>{{comment.userName}}</mat-card-title>
+                
+                
+                <mat-card-subtitle></mat-card-subtitle>
+              </mat-card-header>
+
+                <div style="height: fit-content;" class="info">
+
+                  <p>{{comment.commentText}}</p>
+                </div>
+                </mat-card>
+
+
+
+                <mat-card class="example-card2">
+                    <mat-card-header>
+                     
+                <div mat-card-avatar class="example-header-image">
+                  <img  class="imageprofile" src="{{profileimage}}">
+                </div>
+
+                      <mat-card-title>{{profilename}}</mat-card-title>
+
+                    </mat-card-header>
+                    <button (click)="ratingfun1()" class="btnstar" > <mat-icon  [class.ratingstar]="star1">star</mat-icon></button>
+                    <button (click)="ratingfun2()" class="btnstar"> <mat-icon [class.ratingstar]="star2" >star</mat-icon></button>
+                    <button (click)="ratingfun3()" class="btnstar"> <mat-icon [class.ratingstar]="star3">star</mat-icon></button>
+                    <button (click)="ratingfun4()" class="btnstar"> <mat-icon [class.ratingstar]="star4">star</mat-icon></button>
+                    <button (click)="ratingfun5()" class="btnstar"> <mat-icon  [class.ratingstar]="star5">star</mat-icon></button>
+
+                    <form [formGroup]="form"  class="example-form" (ngSubmit)="onSubmit()" >
+                      <mat-form-field class="example-full-width ">
+                          
+                          <mat-label>اكتب تعليق</mat-label>
+                          <input style="font-size: 20px;" formControlName="commentText" class="comment-form" matInput #message maxlength="256" >
+                          <mat-hint align="start"><strong></strong> </mat-hint>
+                          <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+                          
+                        </mat-form-field>
+                        <button   type="submit" style="font-family: cairo; margin-right: 10px;" mat-raised-button  color="primary">تعليق  <mat-icon style="color: white;  ">send</mat-icon></button>
+                      </form>
+                    </mat-card>
+
+        </div>
+    </div>
+</div>
